@@ -1,55 +1,3 @@
-// import React, { useState } from 'react';
-
-// const TodoApp = () => {
-//     // Mise à jour de l'état : Lorsque vous souhaitez changer la valeur de tache, vous appelez setTache avec la nouvelle valeur
-//   const [tache, setTache] = useState(''); // État pour la nouvelle tâche
-//   const [listeTaches, setListeTaches] = useState<string[]>([]); // État pour la liste des tâches
-
-//   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//     setTache(e.target.value); // Met à jour la tâche actuelle
-//     console.log(setTache)
-//   };
-//   const handleSubmit = () => {
-//     // Vérifie si l'état 'tache' n'est pas vide
-//     if (tache !== '') {
-//       // Si 'tache' contient une valeur, on exécute le code suivant
-//       console.log(tache)
-//       // Met à jour l'état 'listeTaches' en ajoutant la nouvelle tâche
-//       // 'setListeTaches' est appelé avec une fonction fléchée qui prend l'état actuel
-//       // de 'listeTaches' (nommé ici 'listeTachesActuelles') comme argument
-//       setListeTaches(listeTachesActuelles => {
-//         console.log(listeTachesActuelles)
-//         // On retourne un nouveau tableau contenant toutes les tâches actuelles
-//         // suivies de la nouvelle tâche
-//         return [...listeTachesActuelles, tache];
-//         console.log(listeTachesActuelles)
-//       });
-  
-//       // Réinitialise l'état 'tache' pour effacer le champ de saisie
-//       setTache('');
-//     }
-//     // Si 'tache' est vide, rien ne se passe lorsque l'utilisateur appuie sur le bouton
-//   };
-  
-
-//   return (
-//     <div>
-//       <input 
-//         value={tache}
-//         onChange={handleInputChange}
-//         placeholder="Entrez une nouvelle tâche"
-//       />
-//       <button onClick={handleSubmit}>Ajouter Tâche</button>
-//       <ul>
-//         {listeTaches.map((tache,index) => (
-//           <li key={index}>{tache}</li> // Affiche chaque tâche
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default TodoApp;
 import React, { ChangeEvent, useState } from 'react';
 
 const Home = () => {
@@ -106,3 +54,57 @@ function handleDelete(indexToDelete: number){
 
 export default Home;
 
+// explication detaillé 
+
+// import React, { useState } from 'react';
+
+// const TodoApp = () => {
+//     // Mise à jour de l'état : Lorsque vous souhaitez changer la valeur de tache, vous appelez setTache avec la nouvelle valeur
+//   const [tache, setTache] = useState(''); // État pour la nouvelle tâche
+//   const [listeTaches, setListeTaches] = useState<string[]>([]); // État pour la liste des tâches
+
+//   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     setTache(e.target.value); // Met à jour la tâche actuelle
+//     console.log(setTache)
+//   };
+//   const handleSubmit = () => {
+//     // Vérifie si l'état 'tache' n'est pas vide
+//     if (tache !== '') {
+//       // Si 'tache' contient une valeur, on exécute le code suivant
+//       console.log(tache)
+//       // Met à jour l'état 'listeTaches' en ajoutant la nouvelle tâche
+//       // 'setListeTaches' est appelé avec une fonction fléchée qui prend l'état actuel
+//       // de 'listeTaches' (nommé ici 'listeTachesActuelles') comme argument
+//       setListeTaches(listeTachesActuelles => {
+//         console.log(listeTachesActuelles)
+//         // On retourne un nouveau tableau contenant toutes les tâches actuelles
+//         // suivies de la nouvelle tâche
+//         return [...listeTachesActuelles, tache];
+//         console.log(listeTachesActuelles)
+//       });
+  
+//       // Réinitialise l'état 'tache' pour effacer le champ de saisie
+//       setTache('');
+//     }
+//     // Si 'tache' est vide, rien ne se passe lorsque l'utilisateur appuie sur le bouton
+//   };
+  
+
+//   return (
+//     <div>
+//       <input 
+//         value={tache}
+//         onChange={handleInputChange}
+//         placeholder="Entrez une nouvelle tâche"
+//       />
+//       <button onClick={handleSubmit}>Ajouter Tâche</button>
+//       <ul>
+//         {listeTaches.map((tache,index) => (
+//           <li key={index}>{tache}</li> // Affiche chaque tâche
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default TodoApp;
