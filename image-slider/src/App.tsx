@@ -45,7 +45,7 @@ export default function App() {
         {images.map(
           (image, index) =>
             actuele === index && (
-              <div key={image} className="slide">
+              <div key={index} className="slide">
                 <img src={image} alt="images" />
               </div>
             )
